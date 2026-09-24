@@ -37,3 +37,8 @@ coverage.xml
 .DS_Store
 .vscode/
 .idea/
+
+# Other
+runs/
+data/
+*.pt
