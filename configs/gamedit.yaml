@@ -1,0 +1,44 @@
+# configs/gamedit.yaml - everything project-specific lives here and in data.py
+run_name: gamedit-sit-s8        # re-running with the same name resumes training
+seed: 0
+
+data:
+  module: data                  # imports data.py -> build_sampler(**kwargs), visualize()
+  kwargs:                       # 🚧 placeholders until data.py is written
+    data_path: data/processed/terrain_256.npy
+    split: train
+
+model:
+  preset: S                     # SiT-S: 12 layers, dim 384, 6 heads (~30M params)
+  img_size: 256
+  patch_size: 8                 # 256/8 = 32x32 = 1024 tokens
+  c: 1                          # one channel: elevation
+  final_dim: 16
+  scalar_conds: [y]             # relief (height range), normalised to [0, 1]
+
+path:
+  schedule: linear              # linear (SiT default) or cosine
+
+train:
+  num_steps: 100000
+  batch_size: 128
+  lr: 1.0e-4
+  warmup_steps: 1000
+  eta: 0.1                      # drop the condition 10% of the time (for CFG)
+  ema_decay: 0.9999
+  grad_clip: 1.0
+  weight_decay: 1.0e-4
+  bf16: true
+  compile: false                # set true once everything works (faster, slower start)
+  ckpt_every: 5000
+  log_every: 100
+  keep_last: 3
+  runs_root: runs
+  resume: true
+  s3_uri: null                  # e.g. s3://your-bucket/gamedit to mirror runs
+
+sample:
+  num_samples: 16               # 4x4 grid saved at every checkpoint
+  steps: 50
+  simulator: heun               # heun or euler
+  guidance_scale: 2.0
