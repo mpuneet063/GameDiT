@@ -1,6 +1,6 @@
-torch
+torch>=2.4
 einops
 tqdm
 matplotlib
-numpy
-PyYAML
+pyyaml
+rasterio
