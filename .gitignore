@@ -41,4 +41,7 @@ coverage.xml
 # Other
 runs/
 data/
+*.ptdata/
+runs/
 *.pt
+__pycache__/
