@@ -75,9 +75,12 @@ class EMA:
             p.requires_grad_(False)
 
     @torch.no_grad()
-    def update(self, model: nn.Module):
+    def update(self, model: nn.Module, step: int):
+        # Warm-up: low decay early (EMA tracks the live model closely),
+        # rising towards self.decay as training goes on
+        decay = min(self.decay, (1 + step) / (10 + step))
         for ema_p, p in zip(self.model.parameters(), model.parameters()):
-            ema_p.lerp_(p.detach(), 1.0 - self.decay)
+            ema_p.lerp_(p.detach(), 1.0 - decay)
         for ema_b, b in zip(self.model.buffers(), model.buffers()):
             ema_b.copy_(b)
 
@@ -293,7 +296,7 @@ class Trainer(ABC):
 
             # Gradient step + EMA
             self.opt.step()
-            self.ema.update(self.raw_model)
+            self.ema.update(self.raw_model, step)
 
             loss_val = float(loss.detach().item())
             losses.append(loss_val)

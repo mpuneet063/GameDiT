@@ -1,5 +1,5 @@
 # configs/gamedit.yaml - everything project-specific lives here and in data.py
-run_name: gamedit-sit-s8        # re-running with the same name resumes training
+run_name: gamedit-dryrun2     # re-running with the same name resumes training
 seed: 0
 
 data:
@@ -20,8 +20,8 @@ path:
   schedule: linear              # linear (SiT default) or cosine
 
 train:
-  num_steps: 100000
-  batch_size: 128
+  num_steps: 2000
+  batch_size: 32
   lr: 1.0e-4
   warmup_steps: 1000
   eta: 0.1                      # drop the condition 10% of the time (for CFG)
@@ -30,7 +30,7 @@ train:
   weight_decay: 1.0e-4
   bf16: true
   compile: false                # set true once everything works (faster, slower start)
-  ckpt_every: 5000
+  ckpt_every: 500
   log_every: 100
   keep_last: 3
   runs_root: runs
