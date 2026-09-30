@@ -392,7 +392,7 @@ class CFGTrainer(Trainer):
             self._fixed = (noise, cond)
             save_grid(z, os.path.join(sample_dir, "real.png"), self.visualize)
         noise, cond = self._fixed
-        x1 = self.sample(noise, cond)[:, -1]
+        x1 = self.sample(noise, cond)
         save_grid(x1, os.path.join(sample_dir, f"step_{step:07d}.png"), self.visualize)
 
 

@@ -20,7 +20,7 @@ path:
   schedule: linear              # linear (SiT default) or cosine
 
 train:
-  num_steps: 100000
+  num_steps: 50000
   batch_size: 128
   lr: 1.0e-4
   warmup_steps: 1000
@@ -29,7 +29,7 @@ train:
   grad_clip: 1.0
   weight_decay: 1.0e-4
   bf16: true
-  compile: false                # set true once everything works (faster, slower start)
+  compile: true                # set true once everything works (faster, slower start)
   ckpt_every: 5000
   log_every: 100
   keep_last: 3
