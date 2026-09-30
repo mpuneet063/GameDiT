@@ -45,3 +45,4 @@ data/
 runs/
 *.pt
 __pycache__/
+docs
