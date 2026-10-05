@@ -1,15 +1,5 @@
 """
 model.py - SiT (Scalable Interpolant Transformer) backbone.
-
-SHARED by GameDiT and StrokeDiT. Same classes as the 6.S184 lab, plus:
-  1. fixed 2D sin-cos positional encodings (instead of learned randn)
-  2. a pluggable condition embedder (instead of nn.Embedding for MNIST labels)
-  3. zero-initialised final conv in the Depatchifier
-  4. QK-norm in attention (prevents attention-logit growth / training blow-ups)
-
-Switching projects = changing constructor arguments only:
-  GameDiT:   DiffusionTransformerFlowModel(img_size=256, c=1, scalar_conds=["y"])
-  StrokeDiT: DiffusionTransformerFlowModel(img_size=256, c=1, spatial_conds={"x_cond": 1})
 """
 import math
 from typing import Dict, List, Optional, Tuple, Type, Union
