@@ -45,4 +45,4 @@ data/
 runs/
 *.pt
 __pycache__/
-docs
+docs/CODE_MAP.md
