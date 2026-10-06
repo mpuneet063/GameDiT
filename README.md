@@ -215,7 +215,7 @@ For export, `y` sets the character of the terrain: about **0.5** for rolling hil
 - Esser et al., *Scaling Rectified Flow Transformers for High-Resolution Image Synthesis (Stable Diffusion 3)*, 2024. [arXiv:2403.03206](https://arxiv.org/abs/2403.03206)
 - Dehghani et al., *Scaling Vision Transformers to 22 Billion Parameters*, 2023 (QK-norm for training stability). [arXiv:2302.05442](https://arxiv.org/abs/2302.05442)
 - MIT 6.S184, *Generative AI with Stochastic Differential Equations*. This codebase follows its lab structure and notation.
-- [Copernicus DEM GLO-30](https://registry.opendata.aws/copernicus-dem/). Check the [licence](https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model) for the exact attribution wording required.
+- [Copernicus DEM GLO-30](https://registry.opendata.aws/copernicus-dem/). 
 
 ---
 
