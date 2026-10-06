@@ -1,8 +1,6 @@
 """
 simulators.py - turning a learned vector field into samples.
 
-SHARED by GameDiT and StrokeDiT.
-
 Contents
   - ConditionalVectorField : the interface every model implements (model.py subclasses it)
   - ODE / SDE              : what to simulate

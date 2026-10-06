@@ -1,7 +1,7 @@
 """
 train.py - training loop for the shared SiT model.
 
-SHARED by GameDiT and StrokeDiT. Same structure as the 6.S184 lab
+
 (Trainer -> CFGTrainer, get_train_loss, warmup LR, checkpoint callback), plus:
   - EMA weights (samples come from the EMA copy)
   - bf16 mixed precision on GPU, gradient clipping

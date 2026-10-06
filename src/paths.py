@@ -1,9 +1,6 @@
 """
 paths.py - distributions and conditional probability paths for flow matching.
 
-SHARED by GameDiT and StrokeDiT. Nothing in this file knows what the data is:
-  - data only enters through a LabeledSampleable (defined per project in data.py)
-  - conditioning is an opaque dict that is passed straight through
 
 Time convention (MIT 6.S184 notes, Algorithm 3):
     t = 0  ->  pure noise (p_simple)
