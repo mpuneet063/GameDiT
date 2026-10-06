@@ -190,7 +190,7 @@ For export, `y` sets the character of the terrain: about **0.5** for rolling hil
 - **Higher resolution:** larger crops or a two-stage upsampler.
 - **In-engine generation:** export the model to ONNX and run it inside Unreal with the Neural Network Engine (NNE), for "press a key, get a new world" with no Python involved.
 - **Richer conditioning:** climate, erosion style or a rough user sketch, in addition to relief.
-
+<!-- 
 ## Roadmap
 
 - [x] Probability paths, samplers, batched classifier-free guidance
@@ -205,7 +205,7 @@ For export, `y` sets the character of the terrain: about **0.5** for rolling hil
 - [ ] "Generate new world" script: sample → export → import → play
 - [ ] Stretch: outpainting, in-engine generation via ONNX + NNE
 
----
+--- -->
 
 ## References
 
