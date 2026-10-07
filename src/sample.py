@@ -62,7 +62,7 @@ def cmd_relief(model, device, seed, out_dir, img_size, w=2.0, steps=50, n=8, ys=
     save_grid(torch.cat(rows), path, visualize, nrow=n)
     print(f"{path}: rows top-> bottom are y = {list(ys)}")
 
-def cmd_export(model, device, seed, out_dir, img_size, y, w, steps, n=16, size=505, smooth=0.0):
+def cmd_export(model, device, seed, out_dir, img_size, y, w, steps, n=16, size=1009, smooth=0.0):
     export_dir = os.path.join(out_dir, 'export')
     os.makedirs(export_dir, exist_ok=True)
     x = generate(model, n, y, w, steps, seed, device, img_size)
