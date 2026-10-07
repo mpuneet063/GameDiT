@@ -1,0 +1,34 @@
+{
+  "ckpt_step": 45000,
+  "img_size": 256,
+  "opset": 17,
+  "inputs": {
+    "x": [
+      1,
+      1,
+      256,
+      256
+    ],
+    "t": [
+      1
+    ],
+    "h": [
+      1
+    ],
+    "y": [
+      1
+    ],
+    "w": [
+      1
+    ]
+  },
+  "outputs": [
+    "x_next",
+    "x1_hat"
+  ],
+  "default_steps": 50,
+  "default_w": 2.0,
+  "relief_min_m": 150.0,
+  "relief_max_m": 4000.0,
+  "metres_per_pixel": 60.0
+}

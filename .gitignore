@@ -38,6 +38,9 @@ coverage.xml
 .vscode/
 .idea/
 
+# onnx
+*.onnx
+
 # Other
 runs/
 data/
