@@ -1,7 +1,7 @@
 // TerrainMeshBuilder.cpp - heights (metres) -> walkable ProceduralMeshComponent
 // Grids are N x N, stored row-major like a flattened numpy array: index = Row * N + Col
 
-#include "Terrain/TerrainMeshBuilder.h"
+#include "TerrainMeshBuilder.h"
 #include "ProceduralMeshComponent.h"
 #include "Materials/MaterialInterface.h"
 
